@@ -1,0 +1,17 @@
+Package: eqdata
+Title: Financial Data From Financial Modeling Prep
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Zac",
+           family = "Garland",
+           role = c("aut", "cre"),
+           email = "zachary.garland@outlook.com")
+Description: Pulls Financial Data from FMP.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    tidyverse,
+    jsonlite,
+    janitor,
+    lubridate

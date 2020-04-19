@@ -1,0 +1,65 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE,message = FALSE)
+devtools::load_all(".")
+```
+
+# eqdata 
+
+`eqdata` provides financial data from [Financial Modeling Prep](https://financialmodelingprep.com/developer/docs/ "FMP Dev Site")
+
+# install
+
+```{r,eval=FALSE}
+devtools::install_github("zac-garland/eqdata")
+library(eqdata)
+```
+
+# tickers 
+
+```{r}
+
+ticks <- c("AAPL","IBM")
+
+```
+
+# financial statements 
+
+```{r}
+q_income_statement(ticks, freq = c("quarterly", "annual"))
+q_balance_sheet(ticks, freq = c("quarterly", "annual"))
+q_cash_flow_statement(ticks, freq = c("quarterly", "annual"))
+
+```
+
+# company meta 
+```{r}
+q_company_profile(ticks)
+q_company_quote(ticks)
+q_company_rating(ticks)
+
+```
+
+# ratios & calcs 
+```{r}
+q_discount_cash_flow(ticks, freq = c("quarterly", "annual"))
+q_enterprise_value(ticks, freq = c("quarterly", "annual"))
+q_financial_ratios(ticks)
+q_growth_ratios(ticks, freq = c("quarterly", "annual"))
+q_key_ratios(ticks, freq = c("quarterly", "annual"))
+
+```
+
+
+# general 
+```{r}
+q_all_stock_price()
+q_stock_list()
+q_ticker_search("AA", limit = 10)
+
+```
+
+
