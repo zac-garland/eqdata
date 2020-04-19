@@ -1,3 +1,7 @@
+#' q_key_ratios
+#'
+#' @export
+
 q_key_ratios <- function(ticker, freq = c('quarterly','annual')){
  q_key_ratios <- function(ticker, freq){
     url <- paste0("https://financialmodelingprep.com/api/v3/company-key-metrics/",str_to_upper(ticker))

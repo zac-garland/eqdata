@@ -1,3 +1,7 @@
+#' q_splits
+#'
+#' @export
+
 q_splits <- function(ticker){
   q_splits <- function(ticker){
     url <- paste0("https://financialmodelingprep.com/api/v3/historical-price-full/stock_split/",str_to_upper(ticker))

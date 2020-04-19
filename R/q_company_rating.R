@@ -1,3 +1,7 @@
+#' q_company_rating
+#'
+#' @export
+
 q_company_rating <- function(ticker){
  q_company_rating <- function(ticker){
     url <- paste0("https://financialmodelingprep.com/api/v3/company/rating/",str_to_upper(ticker))

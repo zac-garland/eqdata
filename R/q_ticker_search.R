@@ -1,3 +1,7 @@
+#' q_ticker_search
+#'
+#' @export
+
 q_ticker_search <- function(ticker, limit = 10){
  q_ticker_search <- function(ticker, limit = 10){
     url <- paste0("https://financialmodelingprep.com/api/v3/search?query=",str_to_upper(ticker),"&limit=",limit)

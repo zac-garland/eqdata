@@ -1,3 +1,7 @@
+#' q_balance_sheet
+#'
+#' @export
+
 q_balance_sheet <- function(ticker, freq = c('quarterly','annual')){
  q_balance_sheet <- function(ticker, freq){
     url <- paste0("https://financialmodelingprep.com/api/v3/financials/balance-sheet-statement/",str_to_upper(ticker))

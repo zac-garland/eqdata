@@ -1,3 +1,7 @@
+#' q_price
+#'
+#' @export
+
 q_price <- function(ticker){
   q_price <- function(ticker){
     url <- paste0("https://financialmodelingprep.com/api/v3/historical-price-full/",str_to_upper(ticker))

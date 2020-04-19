@@ -1,3 +1,7 @@
+#' q_income_statement
+#'
+#' @export
+
 q_income_statement <- function(ticker, freq = c('quarterly','annual')){
  q_income_statement <- function(ticker, freq){
     url <- paste0("https://financialmodelingprep.com/api/v3/financials/income-statement/",str_to_upper(ticker))

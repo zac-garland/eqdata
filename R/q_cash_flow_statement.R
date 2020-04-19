@@ -1,3 +1,7 @@
+#' q_cash_flow_statement
+#'
+#' @export
+
 q_cash_flow_statement <- function(ticker, freq = c('quarterly','annual')){
  q_cash_flow_statement <- function(ticker, freq){
     url <- paste0("https://financialmodelingprep.com/api/v3/financials/cash-flow-statement/",str_to_upper(ticker))

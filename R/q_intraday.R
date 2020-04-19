@@ -1,3 +1,7 @@
+#' q_intraday
+#'
+#' @export
+
 q_intraday <- function(ticker, freq = c('1min','5min','15min','30min','1hour')){
   q_intraday <- function(ticker, freq){
     freq <- freq[[1]]

@@ -1,3 +1,7 @@
+#' q_financial_ratios
+#'
+#' @export
+
 q_financial_ratios <- function(ticker){
  q_financial_ratios <- function(ticker){
     url <- paste0("https://financialmodelingprep.com/api/v3/financial-ratios/",str_to_upper(ticker))

@@ -1,3 +1,7 @@
+#' q_divs
+#'
+#' @export
+
 q_divs <- function(ticker){
   q_divs <- function(ticker){
     url <- paste0("https://financialmodelingprep.com/api/v3/historical-price-full/stock_dividend/",str_to_upper(ticker))
