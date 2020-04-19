@@ -6,7 +6,8 @@ fmp_data <- function(url) {
   
   dat %>%
     as_tibble() %>%
-    add_column(symbol = symbol, .before = 1)
+    add_column(symbol = symbol, .before = 1) %>% 
+    janitor::clean_names()
   
   
 }
@@ -14,7 +15,8 @@ fmp_data <- function(url) {
 clean_fmp_data <- function(data){
   data %>% 
     mutate(date = lubridate::as_date(date)) %>% 
-    mutate_at(vars(3:ncol(.)),list(as.double))
+    mutate_at(vars(3:ncol(.)),list(as.double)) %>% 
+    janitor::clean_names()
 }
 
 .onAttach <- function(...) {

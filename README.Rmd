@@ -3,11 +3,11 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning = FALSE,message = FALSE)
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE,message = FALSE,eval = FALSE)
 devtools::load_all(".")
 ```
 
-# eqdata 
+# eqdata <img src="inst/figures/eq_hex.svg" width="250" height="250" align="right" />
 
 `eqdata` provides financial data from [Financial Modeling Prep](https://financialmodelingprep.com/developer/docs/ "FMP Dev Site")
 
@@ -18,48 +18,45 @@ devtools::install_github("zac-garland/eqdata")
 library(eqdata)
 ```
 
-# tickers 
 
-```{r}
+# pricing data 
+***
 
-ticks <- c("AAPL","IBM")
-
-```
+* `q_intraday : function (ticker, freq = c("1min", "5min", "15min", "30min", "1hour"))`
+* `q_price : function (ticker)`  
+* `q_divs : function (ticker)`
+* `q_splits : function (ticker)`
 
 # financial statements 
+***
 
-```{r}
-q_income_statement(ticks, freq = c("quarterly", "annual"))
-q_balance_sheet(ticks, freq = c("quarterly", "annual"))
-q_cash_flow_statement(ticks, freq = c("quarterly", "annual"))
+* `q_income_statement(ticker, freq = c("quarterly", "annual"))`
+* `q_balance_sheet(ticker, freq = c("quarterly", "annual"))`
+* `q_cash_flow_statement(ticker, freq = c("quarterly", "annual"))`
 
-```
 
 # company meta 
-```{r}
-q_company_profile(ticks)
-q_company_quote(ticks)
-q_company_rating(ticks)
+***
 
-```
+* `q_company_profile(ticker)`
+* `q_company_quote(ticker)`
+* `q_company_rating(ticker)`
+
 
 # ratios & calcs 
-```{r}
-q_discount_cash_flow(ticks, freq = c("quarterly", "annual"))
-q_enterprise_value(ticks, freq = c("quarterly", "annual"))
-q_financial_ratios(ticks)
-q_growth_ratios(ticks, freq = c("quarterly", "annual"))
-q_key_ratios(ticks, freq = c("quarterly", "annual"))
+***
 
-```
+* `q_discount_cash_flow(ticker, freq = c("quarterly", "annual"))`
+* `q_enterprise_value(ticker, freq = c("quarterly", "annual"))`
+* `q_growth_ratios(ticker, freq = c("quarterly", "annual"))`
+* `q_key_ratios(ticker, freq = c("quarterly", "annual"))`
+* `q_financial_ratios(ticker)`
 
 
 # general 
-```{r}
-q_all_stock_price()
-q_stock_list()
-q_ticker_search("AA", limit = 10)
+***
 
-```
-
+* `q_all_stock_price()`
+* `q_stock_list()`
+* `q_ticker_search("AA", limit = 10)`
 

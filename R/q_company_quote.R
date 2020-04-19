@@ -3,7 +3,8 @@ q_company_quote <- function(ticker){
     url <- paste0("https://financialmodelingprep.com/api/v3/quote/",str_to_upper(ticker))
 
     jsonlite::fromJSON(url) %>%
-      as_tibble()
+      as_tibble() %>% 
+      janitor::clean_names()
 
   }
       
