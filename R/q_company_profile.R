@@ -4,7 +4,7 @@
 
 q_company_profile <- function(ticker){
  q_company_profile <- function(ticker){
-    url <- paste0("https://financialmodelingprep.com/api/v3/company/profile/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/company/profile/",stringr::str_to_upper(ticker))
 
     fmp_data(url)
 

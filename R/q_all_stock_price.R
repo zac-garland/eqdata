@@ -6,7 +6,7 @@ q_all_stock_price <- function(){
     url <- paste0("https://financialmodelingprep.com/api/v3/stock/real-time-price")
 
     jsonlite::fromJSON(url)[[1]] %>%
-      as_tibble()
+      dplyr::as_tibble()
 
   }
      

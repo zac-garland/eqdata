@@ -4,10 +4,10 @@
 
 q_price <- function(ticker){
   q_price <- function(ticker){
-    url <- paste0("https://financialmodelingprep.com/api/v3/historical-price-full/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/historical-price-full/",stringr::str_to_upper(ticker))
 
   fmp_data(url) %>% 
-    select(-label) %>% 
+    dplyr::select(-label) %>% 
     clean_fmp_data()
     
     

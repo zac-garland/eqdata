@@ -4,7 +4,7 @@
 
 q_growth_ratios <- function(ticker, freq = c('quarterly','annual')){
  q_growth_ratios <- function(ticker, freq){
-    url <- paste0("https://financialmodelingprep.com/api/v3/financial-statement-growth/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/financial-statement-growth/",stringr::str_to_upper(ticker))
 
     freq <- freq[[1]]
 

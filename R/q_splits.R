@@ -4,10 +4,10 @@
 
 q_splits <- function(ticker){
   q_splits <- function(ticker){
-    url <- paste0("https://financialmodelingprep.com/api/v3/historical-price-full/stock_split/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/historical-price-full/stock_split/",stringr::str_to_upper(ticker))
     
     fmp_data(url) %>% 
-      select(-label) %>% 
+      dplyr::select(-label) %>% 
       clean_fmp_data()
     
     

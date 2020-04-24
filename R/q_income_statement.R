@@ -4,7 +4,7 @@
 
 q_income_statement <- function(ticker, freq = c('quarterly','annual')){
  q_income_statement <- function(ticker, freq){
-    url <- paste0("https://financialmodelingprep.com/api/v3/financials/income-statement/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/financials/income-statement/",stringr::str_to_upper(ticker))
 
     freq <- freq[[1]]
 

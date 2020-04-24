@@ -6,7 +6,7 @@ q_intraday <- function(ticker, freq = c('1min','5min','15min','30min','1hour')){
   q_intraday <- function(ticker, freq){
     freq <- freq[[1]]
     
-    url <- paste0("https://financialmodelingprep.com/api/v3/historical-chart/",freq,"/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/historical-chart/",freq,"/",stringr::str_to_upper(ticker))
     
     
     

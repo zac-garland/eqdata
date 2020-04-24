@@ -4,7 +4,7 @@
 
 q_discount_cash_flow <- function(ticker, freq = c('quarterly','annual')){
  q_discount_cash_flow <- function(ticker, freq){
-    url <- paste0("https://financialmodelingprep.com/api/v3/company/historical-discounted-cash-flow/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/company/historical-discounted-cash-flow/",stringr::str_to_upper(ticker))
 
     freq <- freq[[1]]
 

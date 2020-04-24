@@ -4,7 +4,7 @@
 
 q_enterprise_value <- function(ticker, freq = c('quarterly','annual')){
  q_enterprise_value <- function(ticker, freq){
-    url <- paste0("https://financialmodelingprep.com/api/v3/enterprise-value/",str_to_upper(ticker))
+    url <- paste0("https://financialmodelingprep.com/api/v3/enterprise-value/",stringr::str_to_upper(ticker))
 
     freq <- freq[[1]]
 
