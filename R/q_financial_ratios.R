@@ -35,7 +35,8 @@ safe_q_financial_ratios <- purrr::safely(q_financial_ratios)
 safe_q_financial_ratios(.x)$result
 }) %>% 
    dplyr::mutate(date = as.Date(date),
-          value = as.double(value))
+          value = as.double(value)) %>% 
+   dplyr::arrange(category,indicator,date)
 
 }
 

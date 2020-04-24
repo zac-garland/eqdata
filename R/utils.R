@@ -25,7 +25,8 @@ clean_fmp_data <- function(data){
   data %>% 
     dplyr::mutate(date = as.Date(date)) %>% 
     dplyr::mutate_at(dplyr::vars(3:ncol(.)),list(as.double)) %>% 
-    janitor::clean_names()
+    janitor::clean_names() %>% 
+    dplyr::arrange(symbol,date)
 }
 
 .onAttach <- function(...) {

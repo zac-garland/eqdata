@@ -11,9 +11,10 @@ q_intraday <- function(ticker, freq = c('1min','5min','15min','30min','1hour')){
     
     
     jsonlite::fromJSON(url) %>% 
-      as_tibble() %>% 
-      mutate(date = lubridate::as_datetime(date)) %>% 
-      add_column(symbol = ticker,.before = 1)
+      dplyr::as_tibble() %>% 
+      dplyr::mutate(date = lubridate::as_datetime(date)) %>% 
+      tibble::add_column(symbol = ticker,.before = 1) %>% 
+      dplyr::arrange(symbol,date)
     
     
   }
